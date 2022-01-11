@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   background: #000;
   display: grid;
@@ -6,13 +12,56 @@
   font-family: Cormorant Garamond;
 }
 
-.home {
+.navbar {
+  display: flex;
+  position: fixed;
+  color: #000;
   width: 70%;
-  height: 80%;
+  top: 11%;
+  align-items: center;
+  z-index: 100;
+  padding-left: 40px;
+}
+.navbar p {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 58px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  font-family: Assistant;
+  font-size: 13px;
+  width: 35%;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+.pageContainer {
+  width: 74%;
+  height: 85%;
   background: #fff;
+  position: relative;
+  overflow-y: scroll;
+  overflow: scroll;
+}
+
+.container {
+  width: 74%;
+  height: 85%;
+  background: #fff;
+  position: relative;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.home {
   background: #000;
   display: flex;
-  position: relative;
+  color: #fff;
 }
 .homeTextContainer {
   width: 45%;
@@ -23,8 +72,7 @@
 .homeTextContainer .homeText {
   position: absolute;
   width: 110%;
-  top: 55%;
-  transform: translate(30%, -50%);
+  transform: translate(35%, 68%);
   z-index: 99;
 }
 .homeTextContainer h1 {
@@ -56,7 +104,7 @@
   font-family: Assistant;
   font-weight: normal;
   line-height: 25px;
-  margin-top: 10px 0 20px;
+  margin: 20px 0 20px;
 }
 .homeTextContainer .btnContainer {
   display: flex;
@@ -99,6 +147,194 @@
   height: 100%;
   position: absolute;
   right: 0;
+}
+
+.shots {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+}
+.shots .bee {
+  display: flex;
+  height: 100%;
+}
+.shots .bee .sectionText {
+  position: relative;
+  width: 80%;
+}
+.shots .bee .sectionText div {
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  transform: translate(25%, -50%);
+}
+.shots .bee .sectionTextNumbering {
+  font-weight: 500;
+  font-size: 80px;
+}
+.shots .bee .sectionTextNumbering span {
+  font-size: 21px;
+}
+.shots .bee .sectionTextTitle {
+  font-weight: bold;
+  font-size: 39px;
+  letter-spacing: 0.01em;
+  margin-top: 20px;
+}
+.shots .bee .sectionTextDesc {
+  font-family: Assistant;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  line-height: 25px;
+}
+.shots .bee .sectionTextDesc span {
+  font-weight: 600;
+}
+.shots .beeImg {
+  width: 21%;
+  display: flex;
+  flex-direction: column;
+}
+.shots .beeImg img:not(:nth-child(2)) {
+  height: 30%;
+}
+.shots .beeLetters {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 160px;
+  font-weight: 800;
+  padding: 30px 30px 0 0;
+}
+.shots .tatia {
+  display: flex;
+  height: 100%;
+}
+.shots .tatia .sectionText {
+  position: relative;
+  width: 80%;
+}
+.shots .tatia .sectionText div {
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  transform: translate(25%, -50%);
+}
+.shots .tatia .sectionTextNumbering {
+  font-weight: 500;
+  font-size: 80px;
+}
+.shots .tatia .sectionTextNumbering span {
+  font-size: 21px;
+}
+.shots .tatia .sectionTextTitle {
+  font-weight: bold;
+  font-size: 39px;
+  letter-spacing: 0.01em;
+  margin-top: 20px;
+}
+.shots .tatia .sectionTextDesc {
+  font-family: Assistant;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  line-height: 25px;
+}
+.shots .tatia .sectionTextDesc span {
+  font-weight: 600;
+}
+.shots .tatia .sectionText div {
+  transform: translate(30%, -50%);
+}
+.shots .tatiaImageContainer {
+  width: 70%;
+  margin-top: 15%;
+  margin-right: 35px;
+}
+.shots .tatiaImageContainer p {
+  font-weight: bold;
+  font-size: 50px;
+  margin: 0 0 15px 30%;
+  letter-spacing: 0.01em;
+}
+.shots .tatiaImageContainer .tatiaImages {
+  display: flex;
+  width: 100%;
+}
+.shots .tatiaImageContainer .tatiaImage {
+  width: 50%;
+  margin-right: 10px;
+}
+.shots .tatiaImageContainer .tatiaImage img {
+  width: 100%;
+}
+.shots .tatiaImageContainer .tatiaImage p {
+  font-weight: normal;
+  font-size: 34px;
+  letter-spacing: 0.01em;
+  margin: 10px 0 0;
+}
+.shots .faceless {
+  display: flex;
+  height: 100%;
+}
+.shots .faceless .sectionText {
+  position: relative;
+  width: 80%;
+}
+.shots .faceless .sectionText div {
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  transform: translate(25%, -50%);
+}
+.shots .faceless .sectionTextNumbering {
+  font-weight: 500;
+  font-size: 80px;
+}
+.shots .faceless .sectionTextNumbering span {
+  font-size: 21px;
+}
+.shots .faceless .sectionTextTitle {
+  font-weight: bold;
+  font-size: 39px;
+  letter-spacing: 0.01em;
+  margin-top: 20px;
+}
+.shots .faceless .sectionTextDesc {
+  font-family: Assistant;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  line-height: 25px;
+}
+.shots .faceless .sectionTextDesc span {
+  font-weight: 600;
+}
+.shots .facelessImages {
+  width: 50%;
+}
+.shots .facelessImages .imgContainer {
+  width: 88%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.shots .facelessImages .imgContainer img {
+  width: 100%;
+}
+.shots .facelessImages p {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 85px;
+  letter-spacing: 0.01em;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,45 @@
 @mixin componentContainer {
-    width: 70%;
-    height: 80%;
+    width: 74%;
+    height: 85%;
     background: #fff;
+    position: relative;
+    overflow-y: scroll;
+    // overflow-y: hidden;
+}
+
+@mixin shotsStyle {
+    .sectionText {
+     position: relative;
+      width: 80%;
+      div{
+            width: 100%;
+            position: absolute;
+            top: 55%;
+            transform: translate(25%, -50%);
+    }
+      &Numbering {
+        font-weight: 500;
+        font-size: 80px;
+        span {
+          font-size: 21px;
+        }
+      }
+      &Title {
+        font-weight: bold;
+        font-size: 39px;
+        letter-spacing: 0.01em;
+        margin-top: 20px;
+      }
+      &Desc {
+        font-family: Assistant;
+        font-weight: 300;
+        font-size: 17px;
+        letter-spacing: 0.02em;
+        margin-top: 20px;
+        line-height: 25px;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
 }

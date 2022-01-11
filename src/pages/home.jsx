@@ -23,12 +23,13 @@ const Home = () => {
     config: { duration: 3000 },
   });
   return (
-    <div className="home">
+    <div className="home container">
+ 
       <div className="homeTextContainer">
         <div className="homeText">
           <h1>
             See the <span className="worldWord">world</span> <br />
-            through my lens <img src={cam} alt="" /> </h1>
+            through my lens</h1>
             <p>
               This is an exhibit of my greatest taken shots <br />
               by yours truly Mo.{" "}
