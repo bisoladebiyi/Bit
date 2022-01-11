@@ -1,0 +1,105 @@
+@import "./abstracts/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+
+.App {
+  background: #000;
+  display: grid;
+  place-items: center;
+  font-family: Cormorant Garamond;
+}
+.home {
+  @include componentContainer;
+  background: #000;
+  display: flex;
+  position: relative;
+  &TextContainer {
+    width: 45%;
+    background: #000;
+    color: #fff;
+    position: relative;
+    .homeText {
+      position: absolute;
+      width: 110%;
+      top: 55%;
+      transform: translate(30%, -50%);
+      z-index: 99;
+    }
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 70px;
+      letter-spacing: 0.01em;
+      .worldWord {
+        position: relative;
+        z-index: 99;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 110%;
+          height: 24%;
+          background: #3a5b4a;
+          left: -4%;
+          bottom: 17px;
+          z-index: -1;
+        }
+      }
+      img {
+        width: 50px;
+      }
+    }
+    p {
+      font-size: 17px;
+      font-family: Assistant;
+      font-weight: normal;
+      line-height: 25px;
+      margin-top: 10px 0 20px;
+    }
+    .btnContainer {
+      display: flex;
+      align-items: center;
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0;
+      p {
+        color: #fff;
+        font-family: Cormorant Garamond;
+        font-size: 27px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+      }
+      figure {
+        margin-left: 6px;
+        position: relative;
+        height: 15px;
+        img {
+          width: 13px;
+          height: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 1px solid #3a5b4a;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  //  .imgContainer{
+  //      width: 55%;
+  //  }
+  &Image {
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    // filter: brightness(200%);
+  }
+}
